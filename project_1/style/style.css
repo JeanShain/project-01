@@ -221,16 +221,21 @@ margin-right: 15px;
     color: #009B4D;
 }
 
-.s-4_link{
+.s-4_info{
+    max-width: 460px;
+    padding: 20px 0 22px;
+    
+    border-bottom: 1px solid rgba(43, 41, 45, 0.15);
+}
+
+.s-4_title{
     font-weight: 700;
     margin-left: 15px;
     font-size: 22px;
     line-height: 26px;
     color: #2B292D;
     text-decoration: none;
-}
-.s-4_link:hover{
-    color: #3142C6;
+    cursor: pointer;
 }
 
 .s-4_text{
@@ -240,7 +245,15 @@ margin-right: 15px;
     font-size: 18px;
     line-height: 26px;
     color: #2B292D;
-    border-bottom: 3px solid #3142C6;
+    display: none;
+}
+
+.s-4-color-title{
+    color: #3040C4;
+}
+
+.s-4-color{
+    border-bottom: 3px solid #3040C4;
 }
 
 .s-4_info-2{
@@ -272,23 +285,7 @@ margin-right: 15px;
     top: 1187px;
     right: 0px;
 }
-.s-4_info-2:hover{
-    transition: 300ms;
-    background-color: #3141C5;
-    color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    text-align: center;
-}
-.s-4_text-2:hover{
-    color: white;
-    transition: 300ms;
-}
-.s-4_omg:hover{
-    background-color: white;
-    transition: 300ms;
 
-}
 
 
 
@@ -446,6 +443,79 @@ margin-right: 15px;
     margin-left: 10px;
 }
 
+.item{
+    text-align: center;
+    align-items: center;
+    max-width: 262px;
+    height: 300px;
+    border-radius: 8px;
+    perspective: 600px;
+    transition: .5s;
+    cursor: pointer;
+}
+.item .front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: .5s;
+}
+.item:hover .front {
+    transform: rotateX(-180deg);
+}
+.item .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3040C4;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: .5s;
+}
+.item .back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+  }
+  .item:hover .back {
+    transform: rotateX(0deg);
+  }
+  .back-item{
+    margin-top: 50%;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    color: white;
+  }
+
+
+
+
+.s-7_omg{
+    margin-top: 22px;
+}
+
+.omg-title{
+    margin-top: 22px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #2B292D;
+}
+
 .grid-2{
     margin-top: 111px;
     display: grid;
@@ -453,9 +523,8 @@ margin-right: 15px;
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-rows: repeat(1, 1fr);
 }
-.item:hover{
-    cursor: pointer;
-}
+
+
 .s-7_button{
     text-align: center;
 }
@@ -599,10 +668,7 @@ margin-right: 15px;
 }
 
 
-.section-10-0{
-    text-align: center;
-    padding: 0 0 96px;
-}
+
 
 .s-10-0_title{
     font-weight: 700;
@@ -615,6 +681,7 @@ margin-right: 15px;
     margin: auto;
     max-width: 554px;
     margin-top: 26px;
+    margin-bottom: 96px;
     font-weight: 400;
     font-size: 24px;
     line-height: 34px;
@@ -625,6 +692,7 @@ margin-right: 15px;
 
 .section-10{
     padding: 0 0 90px;
+    text-align: center;
 }
 
 .grid-3{
@@ -711,12 +779,42 @@ margin-right: 15px;
 
 .s-11_info-2{
     margin-top: 10px;
-    max-width: 495px;
+}
+
+.checkbox-text{
     font-size: 14px;
     line-height: 22px;
     color: rgba(43, 41, 45, 0.6);
 }
 
+.checkbox-fake{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(43, 41, 45, 0.2);
+    border-radius: 2px;  
+    position: relative; 
+    z-index: 1;    
+}
+.checkbox-fake::before{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: #3040C4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.checkbox-email{
+    opacity: 0;
+    z-index: 0;
+}
+.checkbox-email:checked ~ .checkbox-fake::before{
+    opacity: 1;
+    transition: 300ms;
+}
 
 
 .section-12{
@@ -769,6 +867,10 @@ margin-right: 15px;
 }
 
 .footer-text{
+    max-width: 180px;
+}
+
+.footer-title{
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 13px;
@@ -777,7 +879,7 @@ margin-right: 15px;
     color: rgba(43, 41, 45, 0.6);
 }
 
-.footer-sociale{
+.f_omg{
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -1187,15 +1289,16 @@ margin-right: 15px;
         justify-items: center;
     }
     .section-4{
-        padding: 41px 0 562px;
+        padding: 41px 0 67px;
     }
     .s-4_div{
         text-align: start;
     }
     .s-4_screen{
+        position:static;
         max-width: 538px;
-        left: 251px;
-        top: 1911px;
+        margin-top: 49px;
+        margin-right: 101px;
     }
     .section-5{
         padding: 56px 0 69px;
@@ -1252,10 +1355,10 @@ margin-right: 15px;
         padding: 50px 0 79px;
     }
     .grid-2{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 262px);
+        grid-template-rows: repeat(2, 300px);
         gap: 38px;
-        justify-items: center;
+        align-items: center;
     }
     .section-8{
         padding: 87px 0 376px;
@@ -1352,6 +1455,11 @@ margin-right: 15px;
     .s-11-img{
         max-width: 282px;
         width: 100%;
+    }
+    .checkbox-fake{
+        margin-right: 20px;
+        width: 24px;
+        height: 18px;
     }
     .section-12{
         padding: 48px 0 0 ;
@@ -1557,12 +1665,12 @@ margin-right: 15px;
 
 
     .section-4{
-        padding: 49px 0 302px;
+        padding: 49px 0 44px;
     }
     .s-4_info::before{
         display: none;
     }
-    .s-4_link{
+    .s-4_title{
         font-size: 16px;
         line-height: 26px;
     }
@@ -1578,8 +1686,9 @@ margin-right: 15px;
         line-height: 26px;
     }
     .s-4_screen{
-        top:  2218px;
-        left: 13px;
+        margin-right: 0;    
+        align-items: center;
+        margin-top: 17px;
         max-width: 290px;
     }
     .section-5{
@@ -1660,10 +1769,10 @@ margin-right: 15px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         gap: 15px;
-        justify-items: center;
     }
     .item{
         max-width: 290px;
+        height: 300px;
     }
     .s-7_omg{
         max-width: 290px;
@@ -1811,6 +1920,11 @@ margin-right: 15px;
     }
     .but-11{
         margin-bottom: 12px;
+    }
+    .checkbox-fake{
+        margin-right: 20px;
+        width: 36px;
+        height: 18px;
     }
     .section-12{
         padding: 40px 0 0;
