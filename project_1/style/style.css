@@ -1537,6 +1537,9 @@ margin-right: 15px;
     .s-10_OMG{
         max-width: 290px;
     }
+    .s-4_screen{
+        margin-right: auto;
+    }
 
 }
 
@@ -1620,6 +1623,9 @@ margin-right: 15px;
         max-width: 107px;
         width: 100%;
        
+    }
+    .s-4_screen{
+        max-width: 440px;
     }
     .s-11_text{
         max-width: 290px;
@@ -1909,7 +1915,7 @@ margin-right: 15px;
 
     }
     .section-8{
-        padding: 53px 0 413px;
+        padding: 53px 0 53px;
     }
     .s-8_title{
         max-width: 290px;
