@@ -18,8 +18,19 @@
 
 
 
+@media screen and (max-width: 800px){
+    .bx-wrapper{
+        height: 330px;
+
+    }
+    
+}
+
 
 @media screen and (max-width: 320px){
+    .bx-wrapper{
+        height: 565px;
+    }
     .bx-wrapper .bx-pager.bx-default-pager a{
         width: 12px;
         height: 12px;

@@ -697,7 +697,10 @@ margin-right: 15px;
     color: #172342;
 }
 
-
+.container-3{
+    max-width: 1140px;
+    margin:  auto;
+}
 
 .section-10{
     padding: 0 0 90px;
@@ -1143,6 +1146,9 @@ margin-right: 15px;
     .container{
         max-width: 1040px;
     }
+    .container-3{
+        max-width: 1040px;
+    }
     .header_ul{
         margin-right: 50px;
     }
@@ -1162,6 +1168,9 @@ margin-right: 15px;
     }
     .container-1{
         max-width: 1090px;
+    }
+    .container-3{
+        max-width: 750px;
     }
 
     .flex-mod-1{
@@ -1367,8 +1376,9 @@ margin-right: 15px;
         padding: 50px 0 79px;
     }
     .grid-2{
-        grid-template-columns: repeat(2, 262px);
-        grid-template-rows: repeat(2, 300px);
+        margin-right: 120px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 38px;
         align-items: center;
     }
@@ -1530,15 +1540,45 @@ margin-right: 15px;
 
 
 @media screen and (max-width: 800px){
-    
+    .flex-mod-550{
+        flex-direction: column;
+    }
     .container{
         max-width: 500px;
+    }
+    .container-3{
+        max-width: 600px;
+        margin: auto;
+    }
+    .section-1{
+        padding: 0 0 50px;
+    }
+    .s-1_container > div:last-of-type{
+        position: static;
+    }
+    .s-1_omg{
+        margin-top: 50px;
+        position: static;
+        z-index: 1;
+    }
+    .grid-2{
+        margin-right: auto;
     }
     .s-10_OMG{
         max-width: 290px;
     }
     .s-4_screen{
         margin-right: auto;
+    }
+    .front{
+        text-align: center;
+    }
+    .grid-3{
+
+    }
+    .s-8_text{
+        font-size: 20px;
+        line-height: 26px;
     }
 
 }
@@ -1555,6 +1595,9 @@ margin-right: 15px;
     .section-1{
         padding: 0 0 50px;
     }
+    .container-3{
+        max-width: 430px;
+    }
     .s-1_omg{
         margin-top: 50px;
         position: static;
@@ -1570,6 +1613,7 @@ margin-right: 15px;
         display: none;
     }
     .grid-2{
+        margin-left: 123px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         gap: 15px;
@@ -1608,6 +1652,9 @@ margin-right: 15px;
     .container{
         max-width: 310px;
     }
+    .container-3{
+        max-width: 310px;
+    }
     .flex-2{
         flex-direction: column;
     }
@@ -1626,6 +1673,13 @@ margin-right: 15px;
     }
     .s-4_screen{
         max-width: 440px;
+    }
+    .grid-2{
+        margin-left: auto;
+    }
+    .s-8_text {
+        font-size: 18px;
+        line-height: 20px;
     }
     .s-11_text{
         max-width: 290px;
@@ -1652,6 +1706,9 @@ margin-right: 15px;
 @media screen and (max-width: 320px){
     
     .container{
+        max-width: 290px;
+    }
+    .container-3{
         max-width: 290px;
     }
     .flex-2{
