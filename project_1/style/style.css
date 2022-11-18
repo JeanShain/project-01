@@ -1662,15 +1662,11 @@ margin-right: 15px;
         margin-top: 33px;
         max-width: 360px;
     }
-    .s-3_omg{
-        display: none;
+    .grid-mod{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
-    .logo-mod{
-        display: block;
-        max-width: 107px;
-        width: 100%;
-       
-    }
+    
     .s-4_screen{
         max-width: 440px;
     }
@@ -1846,15 +1842,7 @@ margin-right: 15px;
     .section-3{
         padding: 0px;
     }
-    .s-3_omg{
-        display: none;
-    }
-    .logo-mod{
-        display: block;
-        max-width: 107px;
-        width: 100%;
-       
-    }
+
 
 
     .section-4{
